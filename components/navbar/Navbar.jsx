@@ -1,29 +1,35 @@
+import { useTheme } from "@/context/ThemeContext";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <nav>
       <div className="container">
         <section className="flex items-center justify-between">
           <section>
-            <ul className="flex items-center gap-x-10">
-              <Link href={"/"} className="nav-link">
+            <ul
+              className={`flex items-center gap-x-10 ${
+                theme == "dark" ? "text-white" : "text-primary}"
+              }`}
+            >
+              <Link href={"/"} className={`nav-link`}>
                 Home
               </Link>
-              <Link href={"/about"} className="nav-link">
+              <Link href={"/about"} className={`nav-link`}>
                 About
               </Link>
-              <Link href={"/destination"} className="nav-link">
+              <Link href={"/destination"} className={`nav-link`}>
                 Destination
               </Link>
-              <Link href={"/package"} className="nav-link">
+              <Link href={"/package"} className={`nav-link`}>
                 Tour Package
               </Link>
-              <Link href={"/news"} className="nav-link">
+              <Link href={"/news"} className={`nav-link`}>
                 News
               </Link>
-              <Link href={"/contact"} className="nav-link">
+              <Link href={"/contact"} className={`nav-link`}>
                 Contact
               </Link>
             </ul>

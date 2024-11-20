@@ -1,8 +1,12 @@
+"use client";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { CiGlobe } from "react-icons/ci";
 import { LuSunDim } from "react-icons/lu";
+import { MdDarkMode } from "react-icons/md";
+import { useTheme } from "@/context/ThemeContext";
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <header className="py-4">
       <div className="container">
@@ -11,7 +15,7 @@ const Header = () => {
             <div className="w-[35px] h-[35px] bg-secondary text-white rounded-full flex items-center justify-center text-xl">
               <MdOutlineLocalPhone />
             </div>
-            <div>
+            <div className="space-y-2">
               <p className="font-normal font-nunito text-base text-text">
                 Call from anywhere
               </p>
@@ -21,7 +25,11 @@ const Header = () => {
             </div>
           </section>
           <section>
-            <h2 className="text-3xl font-bold text-primary font-roboto">
+            <h2
+              className={`text-3xl font-bold  font-roboto ${
+                theme == "dark" ? "text-white" : "text-primary"
+              }`}
+            >
               <span className="text-secondary">Travel</span>Bug
             </h2>
           </section>
@@ -34,7 +42,11 @@ const Header = () => {
               <p>|</p>
             </div>
             <div>
-              <button className="px-5 py-2 border rounded-3xl text-base font-normal font-roboto text-primary">
+              <button
+                className={`px-5 py-2 border rounded-3xl text-base font-normal font-roboto text-primary' ${
+                  theme == "dark" ? "text-white" : "text-primary"
+                }`}
+              >
                 Sign In
               </button>
             </div>
@@ -43,8 +55,12 @@ const Header = () => {
                 Sign Up
               </button>
             </div>
-            <div className="cursor-pointer">
-              <LuSunDim className="text-text font-normal text-3xl" />
+            <div className="cursor-pointer" onClick={toggleTheme}>
+              {theme === "light" ? (
+                <MdDarkMode className="text-primary font-normal text-3xl" />
+              ) : (
+                <LuSunDim className="text-white font-normal text-3xl" />
+              )}
             </div>
           </section>
         </section>
