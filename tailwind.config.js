@@ -31,7 +31,8 @@ module.exports = {
         btnBg: "#EC8305",
         primary: "#071516",
         secondary: "#4335A7",
-        text: "#222222",
+        text: "#4B5051",
+        dark: "#12151E",
       },
       fontFamily: {
         roboto: '"Roboto", sans-serif',

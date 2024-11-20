@@ -4,3 +4,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply font-roboto font-normal text-lg text-primary hover:text-secondary;
+  }
+}
