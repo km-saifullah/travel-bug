@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav>
       <div className="container">
         <section className="flex items-center justify-between">
-          <section>
+          <section className="hidden lg:block">
             <ul
               className={`flex items-center gap-x-10 ${
                 theme == "dark" ? "text-white" : "text-primary}"
@@ -34,7 +34,7 @@ const Navbar = () => {
               </Link>
             </ul>
           </section>
-          <section>
+          <section className="hidden lg:block">
             <div className="flex items-center gap-x-3 px-4 py-3 bg-slate-200 rounded-3xl">
               <IoSearchOutline className="text-3xl text-text" />
               <input

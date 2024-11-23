@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <section className="pt-6">
-        {/* <VideoLink /> */}
+        <VideoLink />
       </section>
     </div>
   );

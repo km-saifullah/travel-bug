@@ -8,6 +8,7 @@ import { HiBars3 } from "react-icons/hi2";
 import Link from "next/link";
 import { useState } from "react";
 import ToggleBar from "../togglebar/ToggleBar";
+import { IoSearchOutline } from "react-icons/io5";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -54,7 +55,17 @@ const Header = () => {
             <div className="hidden xl:block">
               <p>|</p>
             </div>
-            <div className="hidden xl:block">
+            <section className="block lg:hidden pl-2">
+              <div className="flex items-center gap-x-3 px-4 py-3 bg-slate-200 rounded-3xl">
+                <IoSearchOutline className="text-3xl text-text" />
+                <input
+                  type="text"
+                  placeholder="Destination, Attraction"
+                  className="bg-transparent w-[50%] outline-none border-none text-base text-primary font-nunito font-normal"
+                />
+              </div>
+            </section>
+            <div className="hidden lg:block">
               <button
                 className={`px-5 py-2 border rounded-3xl text-base font-normal font-roboto text-primary' ${
                   theme == "dark" ? "text-white" : "text-primary"
@@ -63,7 +74,7 @@ const Header = () => {
                 Sign In
               </button>
             </div>
-            <div className="hidden xl:block">
+            <div className="hidden lg:block">
               <button className="px-5 py-2 border rounded-3xl bg-btnBg text-white font-roboto font-normal text-base hover:transition-all hover:duration-300 hover:ease-linear hover:bg-white hover:text-primary hover:border">
                 Sign Up
               </button>

@@ -17,13 +17,6 @@ module.exports = {
         "2xl": "2rem",
       },
     },
-    screens: {
-      sm: "328px",
-      md: "640px",
-      lg: "768px",
-      xl: "1140px",
-      "2xl": "1280px",
-    },
     extend: {
       colors: {
         background: "var(--background)",
