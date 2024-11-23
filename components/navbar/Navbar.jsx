@@ -5,7 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <nav>
+    <nav className="">
       <div className="container">
         <section className="flex items-center justify-between">
           <section className="hidden lg:block">

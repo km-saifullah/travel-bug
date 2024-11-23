@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header className="py-4">
+    <header className="py-2 lg:py-4 mt-1 sm:mt-0 px-2 sm:px-0">
       <div className="container">
         <section className="flex items-center justify-between relative">
           <section className="items-center gap-x-3 hidden xl:flex">
@@ -56,7 +56,7 @@ const Header = () => {
               <p>|</p>
             </div>
             <section className="block lg:hidden pl-2">
-              <div className="flex items-center gap-x-3 px-4 py-3 bg-slate-200 rounded-3xl">
+              <div className="flex items-center gap-x-3 px-4 py-2 md:py-3 bg-slate-200 rounded-3xl">
                 <IoSearchOutline className="text-3xl text-text" />
                 <input
                   type="text"
@@ -101,7 +101,7 @@ const Header = () => {
           </section>
         </section>
         <section
-          className={`absolute w-full top-[-300px] left-0 transition-all ease-in-out duration-500 ${
+          className={`absolute z-10 w-full top-[-300px] left-0 transition-all ease-in-out duration-500 ${
             isOpen &&
             "top-[60px] left-0 transition-all ease-in-out duration-500"
           }`}

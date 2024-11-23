@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function VideoLink() {
   return (
     <>
-      <div class=" w-full h-screen overflow-hidden absolute">
+      <div class="w-full h-screen overflow-hidden absolute">
         <video
           className="w-full h-[75%] object-cover object-center"
           autoPlay
@@ -14,16 +14,16 @@ export default function VideoLink() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="container relative">
+      <div className="w-full container relative">
         <div class="relative z-10  h-full text-white mt-48 space-y-4">
-          <h1 class="text-6xl font-bold w-[650px] font-roboto">
+          <h1 class="px-2 sm:px-0 text-xl sm:text-6xl font-bold w-full sm:w-[650px] font-roboto shadow-md">
             Plan tours to dream locations in just a click!
           </h1>
-          <p className="w-[550px] font-nunito font-normal text-lg ">
+          <p className="px-2 sm:px-0 w-full sm:w-[550px] font-nunito font-normal text-base sm:text-lg shadow-md">
             Travel is a transformative and enriching experience that allows
             individuals to explore new destinations, cultures, and landscapes
           </p>
-          <section className="pt-6">
+          <section className="pt-6 px-2 sm:px-0">
             <section className="flex items-center">
               <div className="w-[64px] h-[64px] bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold transform transition-transform duration-300 hover:scale-150">
                 <Image
